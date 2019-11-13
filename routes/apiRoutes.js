@@ -23,7 +23,9 @@ module.exports = function(app) {
           let textArr = tweets.map(tweet => tweet.full_text);
           let text = '';
           textArr.forEach(item => (text += ` ${item}`));
-          extractedText.user1 = text;
+          let replace = req.params.user1;
+          let re = new RegExp(replace, 'g');
+          extractedText.user1 = text.toLowerCase().replace(re, '');
         }
       }
     );
@@ -35,7 +37,9 @@ module.exports = function(app) {
           let textArr = tweets.map(tweet => tweet.full_text);
           let text = '';
           textArr.forEach(item => (text += ` ${item}`));
-          extractedText.user2 = text;
+          let replace1 = req.params.user2;
+          let re1 = new RegExp(replace1, 'g');
+          extractedText.user2 = text.toLowerCase().replace(re1, '');
           res.json(extractedText);
         }
       }
