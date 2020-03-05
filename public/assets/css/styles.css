@@ -144,15 +144,6 @@ input {
   background-color: var(--main-bg-colour);
   color: var(--body-header-colour);
   flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.tweets-one-box,
-.tweets-two-box {
-  display: flex;
-  flex-direction: column;
 }
 
 .bird {
@@ -167,8 +158,6 @@ input {
   margin: 0.2rem 0 0 1rem;
   background-color: var(--body-bg-colour);
   border: 10px;
-  max-width: 550px;
-  border-radius: 10px;
 }
 
 .footer {
